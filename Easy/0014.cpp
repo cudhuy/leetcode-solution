@@ -1,20 +1,17 @@
+//Horizontal scanning
+
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        map<string, int> mp;
-        string res = "";
-        for (string s : strs) {
-            for (int i = 0; i <= s.size(); i++) {
-                string t = s.substr(0, i);
-                mp[s.substr(0, i)]++;
-                if (mp[t] == strs.size() && t.size() > res.size()) {
-                    res = t;
-                }
+        if(strs.size() == 0) return "";
+        int ans = INT_MAX;
+        for(int i = 0; i < strs.size()-1; i++){
+            ans = min(ans, (int)min(strs[i].size(), strs[i+1].size()));
+            while(strs[i].substr(0, ans) != strs[i+1].substr(0, ans)){
+                ans--;
             }
+            if(ans == 0)return "";
         }
-
-        return res;
+        return strs[0].substr(0, ans);
     }
-    
-
-         
+};
