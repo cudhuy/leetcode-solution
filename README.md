@@ -8,7 +8,7 @@
 | 7    | [Reverse Integer][0007]                                           | Math                                              |
 | 9    | [Palindrome Number][0009]                                         | Math                                              |
 | 13   | [Roman to Integer][0013]                                          | String                                            |
-| 14   | [Longest Common Prefix][0014]                                     | String                                            |
+| 14   | [Longest Common Prefix][0014]                                     | horizontal scanning                               |
 
 [Easy]: https://github.com/cudhuy/leetcode-solution/tree/main/Easy
 [0001]: https://github.com/cudhuy/leetcode-solution/blob/main/Easy/0001.cpp
